@@ -43,7 +43,7 @@ main {
 .menu ul {
   display: flex;
   justify-content: space-around;
-  margin-top: 38px;
+  margin-top: 37px;
   flex-wrap: wrap;
 }
 
