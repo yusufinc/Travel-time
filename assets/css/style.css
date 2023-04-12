@@ -29,6 +29,7 @@ body,
 html {
   height: 100%;
   font-family: Poppins;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -38,18 +39,27 @@ main {
 .menu {
   position: fixed;
   width: 100%;
+  transition: 0.5s background-color;
 }
 
+.menu-scroll {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.menu-scroll ul {
+  padding: 10px 0 !important;
+}
 .menu ul {
   display: flex;
   justify-content: space-around;
-  margin-top: 38px;
+  padding: 20px 0;
   flex-wrap: wrap;
+  width: 100%;
+  transition: all 0.5s;
 }
 
 .menu ul li a {
   font-size: 24px;
-  padding-bottom: 3px;
+  padding-bottom: 2px;
   position: relative;
 }
 
@@ -71,6 +81,7 @@ main {
 section {
   width: 100%;
   height: 100%;
+  padding: 40px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -94,7 +105,9 @@ section {
   justify-items: center;
   gap: 30px;
 }
-
+h2 {
+  padding: 24px 0;
+}
 .section-main .hero .hero-sub {
   max-width: 750px;
   font-weight: 300;
@@ -126,10 +139,13 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 .cards {
   display: flex;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 .card {
@@ -166,4 +182,23 @@ section {
 }
 .section-about {
   background-image: url(../images/AboutSection.jpg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-about .about-text {
+  font-size: 22px;
+  font-weight: 300;
+}
+.section-about > div {
+  max-width: 720px;
+  /* margin: auto; */
+}
+
+@media only screen and (max-width: 1024px) {
+  h2 {
+    text-align: center;
+  }
 }

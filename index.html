@@ -7,19 +7,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
+  <body onscroll="scrollFn()">
     <main>
-      <nav class="menu">
+      <nav class="menu" id="menu">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#tours">Tours</a></li>
+          <li><a href="#home" id="home-button">Home</a></li>
           <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about-us">About Us</a></li>
         </ul>
       </nav>
-      <section class="section-main">
+      <section class="section-main" id="home">
         <div class="hero">
           <h1>Travel Time</h1>
           <div class="hero-sub">
@@ -29,7 +26,7 @@
           <a href="#" class="hero-button">Join</a>
         </div>
       </section>
-      <section class="section-gallery">
+      <section class="section-gallery" id="gallery">
         <div>
           <h2>Where do you want to go</h2>
           <div class="cards">
@@ -84,7 +81,35 @@
           </div>
         </div>
       </section>
-      <section class="section-about"></section>
+      <section class="section-about" id="about-us">
+        <div class="about-container">
+          <h2>About Us</h2>
+          <div class="about-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            vulputate libero et velit interdum, ac aliquet odio mattis. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+            lobortis.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+            per inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+            lobortis.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+            per inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+            lobortis.
+          </div>
+        </div>
+      </section>
     </main>
+    <script>
+      function scrollFn() {
+        if (window.pageYOffset > 100) {
+          document.getElementById("menu").classList.add("menu-scroll");
+        } else {
+          document.getElementById("menu").classList.remove("menu-scroll");
+        }
+      }
+    </script>
   </body>
 </html>
